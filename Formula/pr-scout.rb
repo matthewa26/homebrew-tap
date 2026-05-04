@@ -1,8 +1,8 @@
 class PrScout < Formula
   desc "Scan GitHub PRs across local repos and surface ones that need attention"
   homepage "https://github.com/matthewa26/pr-scout"
-  url "https://github.com/matthewa26/pr-scout/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "d29148be7c24f66aee6e8bb9da203604d10a04307c1e494b7b95dec3334bcd65"
+  url "https://github.com/matthewa26/pr-scout/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "ba63aefed695c5859d1379013bbd722d48695ac039fe4d7b007f4f3ac2479145"
   license "Apache-2.0"
   head "https://github.com/matthewa26/pr-scout.git", branch: "main"
 
@@ -16,6 +16,6 @@ class PrScout < Formula
   end
 
   test do
-    assert_match "0.1.2", shell_output("#{bin}/pr-scout --version")
+    assert_match "0.1.3", shell_output("#{bin}/pr-scout --version")
   end
 end
