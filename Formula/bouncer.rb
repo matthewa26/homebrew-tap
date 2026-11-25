@@ -5,18 +5,19 @@ class Bouncer < Formula
   license "GPL-3.0-or-later"
 
   if OS.mac?
-    url "https://github.com/matthewa26/bouncer/releases/download/v1.3.1/bouncer-macos-universal.tar.gz"
-    sha256 "e9f10283a3a25f651d0b4f1eeb81e2e84676a5fdcf859442a316976ab24ab9c7"
+    url "https://github.com/matthewa26/bouncer/releases/download/v1.4.0/bouncer-macos-universal.tar.gz"
+    sha256 "0ec373890358db5408467d72227537abf6662f7b9f6b0ef22dafa0f23583fecf"
   elsif Hardware::CPU.arm?
-    url "https://github.com/matthewa26/bouncer/releases/download/v1.3.1/bouncer-linux-arm64.tar.gz"
-    sha256 "f53f52eb3e8c910904bbef8125366b5f8cab1d98e0440ad9b85a02c9f5a246ab"
+    url "https://github.com/matthewa26/bouncer/releases/download/v1.4.0/bouncer-linux-arm64.tar.gz"
+    sha256 "41937f4251e3ccefe6a495f2dddf5ba2c6ef9336b75bf3d9a540d9c3aea77b75"
   else
-    url "https://github.com/matthewa26/bouncer/releases/download/v1.3.1/bouncer-linux-x86_64.tar.gz"
-    sha256 "ab2dc9cddcf73f1517a1a33e2ea4fd446aa688fe3655f17e4372b73b59598522"
+    url "https://github.com/matthewa26/bouncer/releases/download/v1.4.0/bouncer-linux-x86_64.tar.gz"
+    sha256 "c6e25a2c0dd19c70c625ba3760d1b0ca2224a13a0e4cf8b400d73435f6fd23a0"
   end
 
   def install
     bin.install "bouncer"
+    man1.install "bouncer.1"
   end
 
   test do
